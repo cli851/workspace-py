@@ -6,3 +6,15 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "bash"]
+
+[workflows]
+runButton = "01_hello"
+
+[[workflows.workflow]]
+name = "01_hello"
+mode = "sequential"
+author = 1744670
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd tiny_python_projects-lican/01_hello/ && make test"
