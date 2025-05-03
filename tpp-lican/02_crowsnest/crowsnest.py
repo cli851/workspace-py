@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
 Author : runner <runner@46d0814efead>
 Date   : 2025-05-03
