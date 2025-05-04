@@ -4,14 +4,15 @@
 import os
 from subprocess import getoutput
 
-prg = 'picnic.py'
+file = 'picnic.py'
+prg = 'python picnic.py'
 
 
 # --------------------------------------------------
 def test_exists():
   """exists"""
 
-  assert os.path.isfile(prg)
+  assert os.path.isfile(file)
 
 
 # --------------------------------------------------

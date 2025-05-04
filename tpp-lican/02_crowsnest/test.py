@@ -4,7 +4,8 @@
 import os
 from subprocess import getstatusoutput, getoutput
 
-prg = 'crowsnest.py'
+file = 'crowsnest.py'
+prg = 'python crowsnest.py'
 consonant_words = [
     'brigantine', 'clipper', 'dreadnought', 'frigate', 'galleon', 'haddock',
     'junk', 'ketch', 'longboat', 'mullet', 'narwhal', 'porpoise', 'quay',
@@ -18,7 +19,7 @@ template = 'Ahoy, Captain, {} {} off the larboard bow!'
 # --------------------------------------------------
 def test_exists():
     """exists"""
-    assert (os.path.exists(prg))
+    assert (os.path.exists(file))
 
 
 # --------------------------------------------------
