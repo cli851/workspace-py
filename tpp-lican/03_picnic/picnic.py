@@ -35,15 +35,20 @@ def get_args():
 def main():
     """Make a jazz noise here"""
 
-    args = get_args().item
-    count = len(args)
-    if count < 2:
-        str = args[0]
-    elif count == 2:
-        str = ' and '.join(args)
+    args = get_args()
+    items = args.item
+    num = len(items)
+
+    if args.sorted:
+        items.sort()
+
+    if num == 1:
+        bringing = items[0]
+    elif num == 2:
+        bringing = ' and '.join(items)
     else:
-        str = ', '.join(args[:len(args) - 1]) + ', and ' + args[len(args) - 1]
-    print(f'{temp} {str}.')
+        bringing = ', '.join(items[:-1]) + ', and ' + items[-1]
+    print(f'{temp} {bringing}.')
 
 
 # --------------------------------------------------
