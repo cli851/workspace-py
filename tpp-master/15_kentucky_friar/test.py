@@ -5,14 +5,15 @@ import os
 import re
 from subprocess import getstatusoutput, getoutput
 
-prg = './friar.py'
+prg = 'py friar.py'
+f = 'friar.py'
 
 
 # --------------------------------------------------
 def test_exists():
     """exists"""
 
-    assert os.path.isfile(prg)
+    assert os.path.isfile(f)
 
 
 # --------------------------------------------------
